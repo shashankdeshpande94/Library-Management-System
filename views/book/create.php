@@ -1,0 +1,20 @@
+<?php
+
+/** @var yii\web\View $this */
+/** @var app\models\Book $model */
+/** @var app\models\Author[] $authors */
+
+$this->title = 'Add Book';
+$this->params['breadcrumbs'][] = ['label' => 'Books', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="book-create">
+
+    <h1><?= \yii\bootstrap5\Html::encode($this->title) ?></h1>
+
+    <?= $this->render('_form', [
+        'model' => $model,
+        'authors' => $authors,
+    ]) ?>
+
+</div>

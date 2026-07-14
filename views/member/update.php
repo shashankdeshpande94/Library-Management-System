@@ -1,0 +1,19 @@
+<?php
+
+/** @var yii\web\View $this */
+/** @var app\models\Member $model */
+
+$this->title = 'Update Member: ' . $model->full_name;
+$this->params['breadcrumbs'][] = ['label' => 'Members', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->full_name, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Update';
+?>
+<div class="member-update">
+
+    <h1><?= \yii\bootstrap5\Html::encode($this->title) ?></h1>
+
+    <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
+
+</div>
